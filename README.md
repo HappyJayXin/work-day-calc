@@ -1,6 +1,8 @@
 # work-day-calc
 這是讓投資變得更生活化工具，別再說投資沒感覺，一賺錢就放假，虧錢直接加班，用血汗值看懂你的股票盈虧！
 
+🔗 [Demo](https://work-day-calc.vercel.app/)
+
 ## Getting Started
 
 First, run the development server:
@@ -21,11 +23,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 <details>
 <summary>點擊展開完整 Prompt</summary>
-目標：生成一個生活化工具元件 `WorkdayCalc`，可將股票交易的盈虧金額換算為「可以少工作幾天」或「需要加班幾天補回來」。
+目標：生成一個生活化工具元件 WorkdayCalc，可將股票交易的盈虧金額換算為「可以少工作幾天」或「需要加班幾天補回來」。
 
 ---
 
-扮演一位熟悉 React 18、TypeScript、Tailwind CSS 與 shadcn/ui 的前端工程師，依據以下需求撰寫完整的 `App.tsx` 檔案，所有元件集中於此檔案中，使用 arrow function 與 `useState` 管理狀態。
+扮演一位熟悉 React 18、TypeScript、Tailwind CSS 與 shadcn/ui 的前端工程師，依據以下需求撰寫完整檔案，使用 arrow function 與 `useState` 管理狀態。
 
 ---
 
