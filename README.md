@@ -1,5 +1,5 @@
 # work-day-calc
-讓投資變得更生活化工具，用工作日看懂你的股票盈虧！
+讓投資變得更生活化的工具，用工作日看懂你的股票盈虧！
 
 🔗 [Demo](https://work-day-calc.vercel.app/)
 
