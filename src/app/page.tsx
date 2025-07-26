@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Github } from 'lucide-react';
-import TradeForm from './components/TradeForm';
-import SalaryDialog from './components/SalaryDialog';
-import ResultDialog from './components/ResultDialog';
-import { calculateResult } from '@/lib/utils';
+import { useState } from "react";
+import { Github } from "lucide-react";
+import TradeForm from "./components/TradeForm";
+import SalaryDialog from "./components/SalaryDialog";
+import ResultDialog from "./components/ResultDialog";
+import { calculateResult } from "@/lib/utils";
 
-import type { SalaryType, Result } from '@/types/trade';
+import type { SalaryType, Result } from "@/types/trade";
 
 export default function App() {
   // Trade form
-  const [buyPrice, setBuyPrice] = useState<number | ''>('');
-  const [sellPrice, setSellPrice] = useState<number | ''>('');
-  const [shares, setShares] = useState<number | ''>(1000);
+  const [buyPrice, setBuyPrice] = useState<number | "">("");
+  const [sellPrice, setSellPrice] = useState<number | "">("");
+  const [shares, setShares] = useState<number | "">(1000);
 
   // Salary settings
   const [salary, setSalary] = useState<number>(190);
-  const [salaryType, setSalaryType] = useState<SalaryType>('hourly');
+  const [salaryType, setSalaryType] = useState<SalaryType>("hourly");
   const [hoursPerDay, setHoursPerDay] = useState<number>(8);
 
   // Modal controls
@@ -32,7 +32,14 @@ export default function App() {
   const calculate = () => {
     if (isInvalid) return;
 
-    const res = calculateResult({ buyPrice, sellPrice, shares, salary, salaryType, hoursPerDay });
+    const res = calculateResult({
+      buyPrice,
+      sellPrice,
+      shares,
+      salary,
+      salaryType,
+      hoursPerDay,
+    });
     if (!res) return;
 
     setResult(res);
@@ -69,7 +76,11 @@ export default function App() {
         onHoursChange={setHoursPerDay}
       />
 
-      <ResultDialog open={isResultModalOpen} onOpenChange={setIsResultModalOpen} result={result} />
+      <ResultDialog
+        open={isResultModalOpen}
+        onOpenChange={setIsResultModalOpen}
+        result={result}
+      />
 
       <a
         href="https://github.com/HappyJayXin/work-day-calc"

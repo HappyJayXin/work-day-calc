@@ -1,4 +1,4 @@
-export type SalaryType = 'yearly' | 'monthly' | 'hourly';
+export type SalaryType = "yearly" | "monthly" | "hourly";
 
 export type Result = {
   message: string;

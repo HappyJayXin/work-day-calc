@@ -39,7 +39,9 @@ const TradeForm = ({
           type="number"
           placeholder="請輸入每股買入價"
           value={buyPrice}
-          onChange={(e) => onBuyChange(e.target.value === "" ? "" : +e.target.value)}
+          onChange={(e) =>
+            onBuyChange(e.target.value === "" ? "" : +e.target.value)
+          }
         />
       </div>
 
@@ -52,7 +54,9 @@ const TradeForm = ({
           type="number"
           placeholder="請輸入每股賣出價"
           value={sellPrice}
-          onChange={(e) => onSellChange(e.target.value === "" ? "" : +e.target.value)}
+          onChange={(e) =>
+            onSellChange(e.target.value === "" ? "" : +e.target.value)
+          }
         />
       </div>
 
@@ -65,7 +69,9 @@ const TradeForm = ({
           type="number"
           placeholder="請輸入股數"
           value={shares}
-          onChange={(e) => onSharesChange(e.target.value === "" ? "" : +e.target.value)}
+          onChange={(e) =>
+            onSharesChange(e.target.value === "" ? "" : +e.target.value)
+          }
         />
       </div>
 
