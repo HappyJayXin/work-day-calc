@@ -1,10 +1,10 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 import type { SalaryType, Result } from "@/types/trade";
 
 export const cn = (...inputs: ClassValue[]) => {
-  return twMerge(clsx(inputs))
-}
+  return twMerge(clsx(inputs));
+};
 
 export const formatNumber = (value: number): string => {
   return `${new Intl.NumberFormat("zh-TW", {
@@ -21,7 +21,8 @@ export const calculateResult = (params: {
   salaryType: SalaryType;
   hoursPerDay: number;
 }): Result | null => {
-  const { buyPrice, sellPrice, shares, salary, salaryType, hoursPerDay } = params;
+  const { buyPrice, sellPrice, shares, salary, salaryType, hoursPerDay } =
+    params;
 
   if (!buyPrice || !sellPrice || !shares || salary <= 0) return null;
 
@@ -38,8 +39,8 @@ export const calculateResult = (params: {
     salaryType === "yearly"
       ? salary / 250
       : salaryType === "monthly"
-      ? (salary * 12) / 250
-      : salary * hoursPerDay;
+        ? (salary * 12) / 250
+        : salary * hoursPerDay;
 
   if (dailyWage === 0) return null;
 

@@ -1,10 +1,15 @@
-'use client';
+"use client";
 
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Calculator } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import type { Result } from '@/types/trade';
-import { formatNumber } from '@/lib/utils';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Calculator } from "lucide-react";
+import { cn } from "@/lib/utils";
+import type { Result } from "@/types/trade";
+import { formatNumber } from "@/lib/utils";
 
 type Props = {
   open: boolean;
@@ -25,8 +30,8 @@ const ResultDialog = ({ open, onOpenChange, result }: Props) => {
           <div className="space-y-4 p-4">
             <p
               className={cn(
-                'text-center font-semibold text-lg',
-                result.netProfit >= 0 ? 'text-green-600' : 'text-red-500'
+                "text-center font-semibold text-lg",
+                result.netProfit >= 0 ? "text-green-600" : "text-red-500",
               )}
             >
               {result.message}
@@ -36,7 +41,11 @@ const ResultDialog = ({ open, onOpenChange, result }: Props) => {
               <p>買入手續費：{formatNumber(result.buyFee)}</p>
               <p>
                 賣出金額：
-                <span className={cn(result.netProfit >= 0 ? 'text-green-600' : 'text-red-500')}>
+                <span
+                  className={cn(
+                    result.netProfit >= 0 ? "text-green-600" : "text-red-500",
+                  )}
+                >
                   {formatNumber(result.sellAmount)}
                 </span>
               </p>
@@ -52,8 +61,8 @@ const ResultDialog = ({ open, onOpenChange, result }: Props) => {
                 淨盈虧：
                 <span
                   className={cn(
-                    result.netProfit >= 0 ? 'text-green-600' : 'text-red-500',
-                    'font-semibold'
+                    result.netProfit >= 0 ? "text-green-600" : "text-red-500",
+                    "font-semibold",
                   )}
                 >
                   {formatNumber(result.netProfit)}
