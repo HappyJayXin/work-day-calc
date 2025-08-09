@@ -79,6 +79,11 @@ const TradeForm = ({
         <Button className="w-full" variant="outline" onClick={onOpenSalary}>
           <Settings className="w-4 h-4 mr-2" /> 薪資設定
         </Button>
+        {isInvalid && (
+          <p className="text-xs text-red-500 text-center">
+            請輸入買入價格、賣出價格與股數
+          </p>
+        )}
         <Button className="w-full" disabled={isInvalid} onClick={onCalculate}>
           <Calculator className="w-5 h-5 mr-2" /> 立即換算成工作日數
         </Button>
