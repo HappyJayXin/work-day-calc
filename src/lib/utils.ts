@@ -62,3 +62,15 @@ export const calculateResult = (params: {
     netProfit,
   };
 };
+
+export const calculateWorkDays = (netProfit: number, salary: number, salaryType: SalaryType, hoursPerDay: number): number => {
+  const dailyWage =
+    salaryType === "yearly"
+      ? salary / 250
+      : salaryType === "monthly"
+        ? (salary * 12) / 250
+        : salary * hoursPerDay;
+
+  if (dailyWage === 0) return 0;
+  return Math.round(Math.abs(netProfit) / dailyWage);
+};

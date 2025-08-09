@@ -11,3 +11,19 @@ export type Result = {
   revenue: number;
   netProfit: number;
 };
+
+export type TradeInput = {
+  buyPrice: number;
+  sellPrice: number;
+  shares: number;
+  salary: number;
+  salaryType: SalaryType;
+  hoursPerDay: number;
+};
+
+export type CalcRecord = {
+  id: string;
+  createdAt: string;
+  input: TradeInput;
+  result: Result;
+};
